@@ -1,5 +1,3 @@
-#!/bin/bash
-
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='galilel.conf'
 CONFIGFOLDER='/root/.galilel'
