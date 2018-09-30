@@ -112,6 +112,16 @@ port=$COIN_PORT
 addnode=seed1.galilel.cloud
 addnode=seed2.galilel.cloud
 addnode=seed3.galilel.cloud
+addnode=86.105.49.177
+addnode=217.61.106.44
+addnode=217.61.2.244
+addnode=89.40.125.108
+addnode=85.25.94.4
+addnode=85.25.94.5
+addnode=85.25.94.6
+addnode=85.25.94.7
+addnode=85.25.94.9
+addnode=85.25.94.10
 EOF
 }
 
