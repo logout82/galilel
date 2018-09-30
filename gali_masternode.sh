@@ -1,11 +1,13 @@
+#!/bin/bash
+
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='galilel.conf'
 CONFIGFOLDER='/root/.galilel'
 COIN_DAEMON='galileld'
 COIN_CLI='galilel-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_REPO='https://github.com/Galilel-Project/galilel.git'
-COIN_TGZ='https://github.com/Galilel-Project/galilel/archive/v2.0.0.zip'
+COIN_REPO='https://github.com/GalilelDev/Galilel.git'
+COIN_TGZ=''
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Galilel'
 COIN_PORT=36001
@@ -51,12 +53,6 @@ function download_node() {
   cd - >/dev/null 2>&1
   rm -r $TMP_FOLDER >/dev/null 2>&1
   clear
-}
-
-function ask_permission() {
- echo -e "${RED}I trust zoldur and want to use$ $COIN_NAME binaries compiled on his server.${NC}."
- echo -e "Please type ${RED}YES${NC} if you want to use precompiled binaries, or type anything else to compile them on your server"
- read -e ZOLDUR
 }
 
 function configure_systemd() {
