@@ -20,6 +20,18 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+function remove_old() {
+systemctl stop Galilel.service
+rm -r .galilel
+cd /usr/local/bin/
+rm -r galilel-cli
+rm -r galileld
+rm -r galilel-tx
+cd ..
+cd ..
+cd ..
+cd
+}
 
 function compile_node() {
   echo -e "Prepare to compile $COIN_NAME"
@@ -292,7 +304,7 @@ function setup_node() {
 
 ##### Main #####
 clear
-
+remove_old
 checks
 prepare_system
 #ask_permission
